@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>GeekQuest Creat Charakter</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="keywords" content="">
+
+<link href="bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<h3>Please create your Charakter</h3><br><br>
+
+
+	<form action="/character">
+		<br> Name:      <input type="text" name="name" value="Name of the Character"><br>
+		<br> Charclass: <input list="charclass" name="charclass">
+		<datalist id="charclass">
+			<option value="mage">
+			<option value="hobbit">
+			<option value="dwarf">
+		</datalist>
+		<br><br>
+		<button type="submit">Save your Character</button>
+	</form>
+
+</body>
+</html>
