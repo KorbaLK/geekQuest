@@ -22,30 +22,28 @@ public class CharacterServlet extends HttpServlet {
 
 		UserService userService = UserServiceFactory.getUserService();
 		User currentUser = userService.getCurrentUser();
+
 		String emailCu = currentUser.getEmail();
+		String name = req.getParameter("name");
+		String charclass = req.getParameter("charclass");
 
-		resp.getWriter().println("<p>Hallo "+emailCu+" Hier ist ihr neuer Character.");
+		Player player1 = new Player(emailCu, name, charclass);
 
-		resp.getWriter().println(req.getParameter("name")+ " " + req.getParameter("charclass") + " health = 10 ");
-
-
-
-
-		/*
-
-		Player player1 = new Player(emailCu, "Frodo", "Mage", 100);
-
-		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		DatastoreService datastore = DatastoreServiceFactory
+				.getDatastoreService();
 
 		Entity entity1 = new Entity(player1.getKey());
 		entity1.setProperty("name", player1.getName());
 		entity1.setProperty("charclass", player1.getCharclass());
-		entity1.setProperty("health", player1.getHealth());
+		entity1.setProperty("health", player1.HEALTH);
 
-		 datastore.put(entity1);
+		datastore.put(entity1);
 
-		 */
-
-	}
+		resp.getWriter().println(
+				"<p>Hallo " + emailCu + " Here is your new character:");
+		
+		resp.getWriter().println("<br><br>" + "name: "+  name + " <br>charclass: " + charclass+ " <br>health: "+ player1.HEALTH);
+		
+	}	
 
 }

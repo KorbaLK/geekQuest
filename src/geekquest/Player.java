@@ -8,14 +8,13 @@ public class Player {
 	Key key;
 	String name;
 	String charclass;
-	int health;
+	static final int HEALTH = 80;
 	String email;
 
-	Player(String email, String name, String charclass, int health){
-		this.key = KeyFactory.createKey("Charakter", email);
+	Player(String email, String name, String charclass){
+		this.key = KeyFactory.createKey("character", email);
 		this.name = name;
 		this.charclass = charclass;
-		this.health = health;
 	}
 
 	public Key getKey(){
@@ -36,14 +35,6 @@ public class Player {
 
 	public void setCharclass(String charclass) {
 		this.charclass = charclass;
-	}
-
-	public int getHealth() {
-		return health;
-	}
-
-	public void setHealth(int health) {
-		this.health = health;
 	}
 
 	public void heal(int points){

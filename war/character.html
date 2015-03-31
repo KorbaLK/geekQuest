@@ -12,18 +12,21 @@
 </head>
 
 <body>
-	<h3>Please create your Charakter</h3><br><br>
+	<h3>Please create your Charakter</h3>
+	<br>
+	<br>
 
 
 	<form action="/character">
-		<br> Name:      <input type="text" name="name" value="Name of the Character"><br>
-		<br> Charclass: <input list="charclass" name="charclass">
-		<datalist id="charclass">
-			<option value="mage">
-			<option value="hobbit">
-			<option value="dwarf">
-		</datalist>
-		<br><br>
+		<br> Name: <input type="text" name="name"
+			value="Name of the Character"><br> 
+			<br> Charclass:
+		<select name="charclass">
+			<option value="mage">Mage</option>
+			<option value="hobbit">Hobbit</option>
+			<option value="dwarf">Dwarf</option>
+		</select> <br>
+		<br>
 		<button type="submit">Save your Character</button>
 	</form>
 
