@@ -81,7 +81,7 @@ public class GeekQuestServlet extends HttpServlet {
 				resp.getWriter()
 						.println(
 								"<br><br>You don´t have a Character yet...<br><br>"
-										+ "<br><br><form action=\"/character.html\"> <button type=\"submit\">Please, create a Character!</button></form>");
+										+ "<br><br><form action=\"/character.jsp\"> <button type=\"submit\">Please, create a Character!</button></form>");
 			} else {
 				resp.getWriter().println(
 						"Here is you character: <br><br>" + "Name: "
